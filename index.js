@@ -17,8 +17,9 @@ function checkItems(){
 
 function removeItems(){
     //listen for user to delete item
-    $("").click(function(e){
+    $(".shopping-item-delete").click(function(e){
         e.preventDefault(); //prevent default submission
+        //need to find a way to remove whole section of html code
     });
 }
 
