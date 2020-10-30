@@ -25,9 +25,11 @@ function removeItems(){
     });
 }
 
-//main function
+//main function, call other functions in the main function
 function main(){
-    
+    newItem();
+    checkItems();
+    removeItems();    
 }
 
 //Evoke the main function
