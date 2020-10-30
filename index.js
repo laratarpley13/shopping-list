@@ -20,6 +20,7 @@ function removeItems(){
     $(".shopping-item-delete").click(function(e){
         e.preventDefault(); //prevent default submission
         //need to find a way to remove whole section of html code
+        $(this).closest('li').remove();
     });
 }
 
