@@ -4,7 +4,8 @@ function newItem(){
     $("#js-shopping-list-form").submit(function(e){
         e.preventDefault(); //prevent default submission
         //add entered item as an li element in the ul parent element
-        $(".shopping-list").append(`<li><span class="shopping-item">${this}</span><div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button><button class="shopping-item-delete"><span class="button-label">delete</span></button></div></li>`);
+        const newItem = $(this).find('input [name="shopping-list-entry"]').val();
+        $("ul").append(`<li><span class="shopping-item">${newItem}</span><div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button><button class="shopping-item-delete"><span class="button-label">delete</span></button></div></li>`);
     });
 }
 
