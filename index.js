@@ -13,16 +13,16 @@ function checkItems(){
     //listen for user to check or check of item
     $(".shopping-item-toggle").click(function(e){
         e.preventDefault(); //prevent default submission
-        $(this).toggleClass("shopping-item-toggle");
+        this.toggleClass("shopping-item-toggle");
     });
 }
 
 function removeItems(){
     //listen for user to delete item
-    $(".shopping-item-delete").click(function(e){
+    $('ul').on('click', '.shopping-item-delete', function(e){
         e.preventDefault(); //prevent default submission
         //need to find a way to remove whole section of html code
-        $(this).closest('li').remove();
+        this.closest('li').remove();
     });
 }
 
