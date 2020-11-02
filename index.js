@@ -11,10 +11,10 @@ function newItem(){
 
 function checkItems(){
     //listen for user to check or check of item
-    $('button.shopping-item-toggle').click(function(e){
+    $('ul').on('click', '.shopping-item-toggle', function(e){
         e.preventDefault(); //prevent default submission
-        //determine if class is checked (true) or not checked (false)
-        this.closest('span').toggleClass("shoping-item_checked");
+        const targetButton = $(this).parent().prev();
+        targetButton.toggleClass('shopping-item__checked');
     });
 }
 
