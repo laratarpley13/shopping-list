@@ -5,7 +5,19 @@ function newItem(){
         e.preventDefault(); //prevent default submission
         //add entered item as an li element in the ul parent element
         const newItem = $('#shopping-list-entry').val();
-        $("ul").append('<li><span class="shopping-item">' +newItem+ '</span><div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button><button class="shopping-item-delete"><span class="button-label">delete</span></button></div></li>');
+        $("ul").append(`
+            <li>
+                <span class="shopping-item">${newItem}</span>
+                <div class="shopping-item-controls">
+                    <button class="shopping-item-toggle">
+                        <span class="button-label">check</span>
+                    </button>
+                    <button class="shopping-item-delete">
+                        <span class="button-label">delete</span>
+                    </button>
+                </div>
+            </li>
+        `);
         $('#shopping-list-entry').val('');
     });
 }
